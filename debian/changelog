@@ -1,0 +1,31 @@
+udt (4.11-1) precise; urgency=low
+
+  * New upstream version 4.11
+
+ -- Constantine Peresypkin <kit@dev>  Thu, 24 Oct 2013 22:00:12 +0300
+
+udt (4.9-2) unstable; urgency=low
+
+  * [50662a3] Remove commented lines from install files
+  * [9145770] Move header files to avoid collisions (Closes: #646777)
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 18 Nov 2011 13:16:56 -0500
+
+udt (4.9-1) unstable; urgency=low
+
+  * [0790269] New upstream version 4.9
+  * [166374a] Bump Standards-Version to 3.9.2, no changes necessary
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 31 Aug 2011 23:31:06 -0400
+
+udt (4.8-2) unstable; urgency=low
+
+  * [e94c560] Restrict supported architectures to i386 and amd64 (Closes: #624406)
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 04 Jun 2011 14:19:17 -0400
+
+udt (4.8-1) unstable; urgency=low
+
+  * Initial release (Closes: #612544)
+
+ -- Jon Bernard <jbernard@debian.org>  Sun, 27 Mar 2011 10:15:42 -0400

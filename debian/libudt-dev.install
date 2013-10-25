@@ -1,0 +1,3 @@
+src/*.a     usr/lib/
+src/*.h     usr/include/udt
+src/udt     usr/include/udt

@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+export arch=AMD64
+%:
+	dh $@
+
+override_dh_install:
+	mv src/libudt.so src/libudt.so.0.0.0
+	dh_install --sourcedir=$(CURDIR)

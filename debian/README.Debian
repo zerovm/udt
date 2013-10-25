@@ -1,0 +1,11 @@
+In Debian, UDT's headers files are placed in /usr/include/udt. Any references
+in the examples and documentation to including headers files, like:
+
+    #include <udt.h>
+
+need to be prefixed with 'udt' like so:
+
+    #include <udt/udt.h>
+
+Since UDT's header files are generically named, moving them to their own
+subdirectory helps prevent name collisions with other system header files.

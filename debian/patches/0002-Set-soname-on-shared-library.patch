@@ -1,0 +1,24 @@
+From: Jon Bernard <jbernard@debian.org>
+Date: Sun, 27 Mar 2011 12:37:14 -0400
+Subject: Set soname on shared library
+
+This will allow multiple future versions of the library to be installed
+on a system without breaking existing binaries.
+---
+ src/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/Makefile b/src/Makefile
+index 8b8ddbe..2a27f8a 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -40,7 +40,7 @@ all: libudt.so libudt.a udt
+ 
+ libudt.so: $(OBJS)
+ ifneq ($(os), OSX)
+-	$(C++) -shared -lpthread -o $@ $^
++	$(C++) -shared -lpthread -Wl,-soname,libudt.so.0 -o $@ $^
+ else
+ 	$(C++) -dynamiclib -o libudt.dylib -lstdc++ -lpthread -lm $^
+ endif
+-- 

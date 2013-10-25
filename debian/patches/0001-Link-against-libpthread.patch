@@ -1,0 +1,24 @@
+From: Jon Bernard <jbernard@debian.org>
+Date: Sun, 27 Mar 2011 12:33:31 -0400
+Subject: Link against libpthread
+
+Since UDT uses the pthread library, it is appropriate to link against
+it so that those symbols are defined.
+---
+ src/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/Makefile b/src/Makefile
+index 0f9190d..8b8ddbe 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -40,7 +40,7 @@ all: libudt.so libudt.a udt
+ 
+ libudt.so: $(OBJS)
+ ifneq ($(os), OSX)
+-	$(C++) -shared -o $@ $^
++	$(C++) -shared -lpthread -o $@ $^
+ else
+ 	$(C++) -dynamiclib -o libudt.dylib -lstdc++ -lpthread -lm $^
+ endif
+-- 

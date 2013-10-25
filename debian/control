@@ -1,0 +1,35 @@
+Source: udt
+Priority: extra
+Maintainer: Jon Bernard <jbernard@debian.org>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.2
+Section: libs
+Homepage: http://udt.sourceforge.net
+Vcs-Git: git://git.debian.org/collab-maint/udt.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/udt.git;a=summary
+
+Package: libudt-dev
+Section: libdevel
+Architecture: i386 amd64
+Depends: libudt0 (= ${binary:Version}), ${misc:Depends}
+Description: UDP-based Data Transfer Protocol - development files
+ UDT is a reliable UDP based application level data transport protocol for
+ distributed data intensive applications over wide area high-speed networks.
+ UDT uses UDP to transfer bulk data with its own reliability control and
+ congestion control mechanisms. The new protocol can transfer data at a much
+ higher speed than TCP does. UDT is also a highly configurable framework that
+ can accommodate various congestion control algorithms.
+ .
+ Install this package if you wish to develop your own programs using the
+ UDP-based data transfer protocol library.
+
+Package: libudt0
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: UDP-based Data Transfer Protocol
+ UDT is a reliable UDP based application level data transport protocol for
+ distributed data intensive applications over wide area high-speed networks.
+ UDT uses UDP to transfer bulk data with its own reliability control and
+ congestion control mechanisms. The new protocol can transfer data at a much
+ higher speed than TCP does. UDT is also a highly configurable framework that
+ can accommodate various congestion control algorithms.
